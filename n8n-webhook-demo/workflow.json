@@ -1,0 +1,82 @@
+{
+  "name": "MONARDAS | Webhook Payload Validation Demo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "monardas-lead-demo",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "f9d9a146-90bf-4c85-b562-04a15be0e5d1",
+      "name": "Incoming Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        260,
+        300
+      ],
+      "webhookId": "95c3e441-7b90-4318-9b6b-672b436adfff"
+    },
+    {
+      "parameters": {
+        "jsCode": "const incoming = $input.first().json;\nconst body = incoming.body ?? incoming;\nconst email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';\nconst requestId = typeof body.request_id === 'string' ? body.request_id.trim() : '';\nconst errors = [];\nif (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || email.length > 254) errors.push('invalid email');\nif (!/^[A-Za-z0-9_-]{1,64}$/.test(requestId)) errors.push('invalid request_id');\nreturn [{json: errors.length ? {ok:false, errors, request_id: requestId || null} : {ok:true, request_id:requestId, email, status:'validated'}}];"
+      },
+      "id": "e959c190-1c39-4f4d-a383-fae283db1930",
+      "name": "Validate Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        490,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "1c3586b3-a2d7-4ac9-a723-d9d3e2bdf1fe",
+      "name": "JSON Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        730,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Incoming Lead": {
+      "main": [
+        [
+          {
+            "node": "Validate Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Input": {
+      "main": [
+        [
+          {
+            "node": "JSON Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "tags": []
+}
