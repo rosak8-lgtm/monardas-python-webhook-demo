@@ -38,3 +38,19 @@ Repeat the same request: `duplicate` changes from `false` to `true`. Stop with C
 ## Honest portfolio description
 
 > Built a local Python HTTP webhook demo with JSON input validation, SQLite persistence, duplicate detection and unit tests. This is an independent engineering sample, not prior paid client work. Available to extend to n8n and a CRM after defining acceptance criteria.
+
+
+## Small paid engineering pilots
+
+MONARDAS is available to discuss **small, paid, clearly scoped Python/API tasks**. The repository above is a technical demo, not evidence of production deployments or prior paid client work.
+
+Possible first projects include:
+
+- Validate incoming HTTP/JSON payloads and document failure cases.
+- Add or improve Python unit tests for an existing API/webhook handler.
+- Diagnose duplicate records, normalize data, or prototype safe SQLite persistence.
+- Build a small, reproducible data-mapping script when sample input/output and access terms are provided.
+
+**Before any engagement:** agree in writing on exact deliverables, acceptance tests, schedule, price, access/security limitations, and handover. Production deployment, CRM/n8n integrations, and data-security guarantees are **not** part of this demo and would require separate review and scope.
+
+For employer-direct inquiries: **rosak8@gmail.com** (subject: `MONARDAS — paid Python/API pilot`). If you found this work through Upwork or another hiring marketplace, **use that platform's approved messaging and contracting process instead of contacting off-platform**.
