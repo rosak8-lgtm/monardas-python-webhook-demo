@@ -54,3 +54,21 @@ Possible first projects include:
 **Before any engagement:** agree in writing on exact deliverables, acceptance tests, schedule, price, access/security limitations, and handover. Production deployment, CRM/n8n integrations, and data-security guarantees are **not** part of this demo and would require separate review and scope.
 
 For employer-direct inquiries: **rosak8@gmail.com** (subject: `MONARDAS — paid Python/API pilot`). If you found this work through Upwork or another hiring marketplace, **use that platform's approved messaging and contracting process instead of contacting off-platform**.
+
+
+## Additional example: offline CSV quality audit
+
+An independent, **offline and read-only** CSV validation example is included in [examples/csv_lead_audit.py](examples/csv_lead_audit.py). It reviews an explicitly supplied local CSV with columns `name,email,service`, counts accepted / invalid / duplicate records, and prints row numbers with issue codes. It does **not** upload, modify, store, send, or print the CSV's names and email addresses. This is not a production-grade email-validation or privacy guarantee.
+
+Run from the repository root:
+
+```bash
+python3 -B -m unittest discover -s examples -p 'test_*.py' -v
+python3 -B examples/csv_lead_audit.py examples/sample_leads.csv
+```
+
+The synthetic sample intentionally has one duplicate and one invalid email, so the second command returns exit code **1** after printing a JSON summary. Exit 0 = no rejected rows, exit 1 = some invalid rows, exit 2 = unreadable/invalid file. Duplicate rows are reported but are not classified as invalid rows.
+
+The example has **13 separate unit tests** in [examples/test_csv_lead_audit.py](examples/test_csv_lead_audit.py). The original webhook demonstration and its **six tests** remain independent.
+
+**Possible small paid deliverable based on this sample:** adapt validation rules to a client's authorized synthetic/sample export, add documented error categories, and provide a repeatable QA summary after agreeing on scope and fee. No client data, backend integrations or paid engagements are represented by this repository.
