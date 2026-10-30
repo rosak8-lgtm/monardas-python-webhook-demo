@@ -1,0 +1,5 @@
+name,email,service
+Ada,ada@example.com,Heating
+Bo,bo@example.com,Plumbing
+Ada, ADA@EXAMPLE.COM , heating
+Cara,not-an-email,Heating
