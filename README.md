@@ -42,6 +42,9 @@ Repeat the same request: `duplicate` changes from `false` to `true`. Stop with C
 
 ## Small paid engineering pilots
 
+**Ready-to-scope offers:** [CSV/JSON QA report (proposed $75)](PAID_PILOTS.md#pilot-a--csv--json-data-quality-report) and [Python webhook/API validation tests (proposed $125)](PAID_PILOTS.md#pilot-b--python-webhook--api-validation-tests). These are proposals, not past paid client work.
+
+
 MONARDAS is available to discuss **small, paid, clearly scoped Python/API tasks**. The repository above is a technical demo, not evidence of production deployments or prior paid client work.
 
 Possible first projects include:
