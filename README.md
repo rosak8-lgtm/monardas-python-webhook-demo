@@ -1,5 +1,16 @@
 # MONARDAS — Lead Webhook & Duplicate Protection (technical demo)
 
+
+## HVAC estimate recovery — current offer
+
+MONARDAS offers a **founder-led pilot for residential HVAC contractors** to review **25–50 unsold replacement estimates**, identify suitable opportunities, prepare staff-reviewed follow-ups, and measure responses. Proposed pilot fee: **$300–$500**, scoped before commitment. No revenue guarantee or existing customer results are claimed.
+
+- [Review the MONARDAS HVAC offer](https://monardas.com/hvac)
+- [Request a free estimate recovery assessment](https://monardas.com/contact?intent=hvac-pilot)
+- Business enquiries: **yurii@monardas.com**
+
+For prospective clients: submitting an assessment request authorizes a response to that request; it does not by itself sign you up to marketing email campaigns.
+
 **Status:** self-contained local demonstration, not production software or a completed client engagement.
 
 Python 3 standard library only. Receives JSON leads at `POST /webhooks/lead`, validates required fields, normalizes email/name/service, deduplicates by normalized email + service, stores leads in SQLite, and returns an idempotent result. Includes `/health` and six unit tests. No third-party APIs, no email sending, no CRM sync, no AI scoring, and **no n8n runtime**; these are integration extension points, not claimed features.
