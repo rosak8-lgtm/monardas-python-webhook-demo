@@ -1,6 +1,6 @@
 # MONARDAS — Small Paid Python / Data QA Projects
 
-**Contact for employer-direct projects:** rosak8@gmail.com
+**Contact for employer-direct projects:** yurii@monardas.com
 
 **Location:** Kutaisi, Georgia (UTC+4). Written, asynchronous communication preferred. Basic English. Remote work only.
 
