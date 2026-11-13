@@ -56,7 +56,7 @@ Possible first projects include:
 
 **Before any engagement:** agree in writing on exact deliverables, acceptance tests, schedule, price, access/security limitations, and handover. Production deployment, CRM/n8n integrations, and data-security guarantees are **not** part of this demo and would require separate review and scope.
 
-For employer-direct inquiries: **rosak8@gmail.com** (subject: `MONARDAS — paid Python/API pilot`). If you found this work through Upwork or another hiring marketplace, **use that platform's approved messaging and contracting process instead of contacting off-platform**.
+For employer-direct inquiries: **yurii@monardas.com** (subject: `MONARDAS — paid Python/API pilot`). If you found this work through Upwork or another hiring marketplace, **use that platform's approved messaging and contracting process instead of contacting off-platform**.
 
 
 ## Additional example: offline CSV quality audit
